@@ -42,14 +42,14 @@ export const  InputCEP = ({ onChangeText }) => {
   );
 }
 
-export const  InputIBGE = ({ onChangeText }) => {
+export const  InputBANKS = ({ onChangeText }) => {
   return (
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        maxLength={2}
-        placeholder="Digite o UF"
-        keyboardType='text'
+        maxLength={8}
+        placeholder="Digite o BANKS"
+        keyboardType='numeric'
         onChangeText={onChangeText}
       />
     </View>

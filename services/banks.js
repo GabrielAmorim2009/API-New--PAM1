@@ -1,7 +1,7 @@
 import * as config from './config.js';
 
-export const getIBGE = async (ibge) => {
-    const url = `${config.url_api()}/ddd/v1/${ibge}`;
+export const getIBGE = async (bank) => {
+    const url = `${config.url_api()}/bank/v1/${bank}?providers=dados-abertos-br,gov,wikipedia`;
     const options = {
         method: 'GET',
         headers: {

@@ -1,7 +1,7 @@
 import * as config from './config.js';
 
-export const getCNPJ = async (cnpj) => {
-    const url = `${config.url_api()}/ddd/v1/${cnpj}`;
+export const getBANKS = async (cnpj) => {
+    const url = `${config.url_api()}/cnpj/v1/${cnpj}`;
     const options = {
         method: 'GET',
         headers: {
@@ -17,7 +17,7 @@ export const getCNPJ = async (cnpj) => {
         
         return await response.json();
     } catch (error) {
-        console.error('Error fetching DDD data:', error);
+        console.error('Error fetching CNPJ data:', error);
         throw error;
     }
 }

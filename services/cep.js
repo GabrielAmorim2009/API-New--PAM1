@@ -1,7 +1,7 @@
 import * as config from './config.js';
 
 export const getCEP = async (cep) => {
-    const url = `${config.url_api()}/ddd/v1/${cep}`;
+    const url = `${config.url_api()}/cep/v1/${cep}`;
     const options = {
         method: 'GET',
         headers: {
@@ -17,7 +17,7 @@ export const getCEP = async (cep) => {
         
         return await response.json();
     } catch (error) {
-        console.error('Error fetching DDD data:', error);
+        console.error('Error fetching CEP data:', error);
         throw error;
     }
 }

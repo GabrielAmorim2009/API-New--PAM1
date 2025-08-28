@@ -5,7 +5,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import TelaDDD from './screens/TelaDDD';
 import TelaCEP from './screens/TelaCEP';
 import TelaCNPJ from './screens/TelaCNPJ';
-import TelaIBGE from './screens/TelaIBGE';
+import TelaBANKS from './screens/TelaBANKS';
 
 const Drawer = createDrawerNavigator();
 
@@ -32,7 +32,7 @@ export default function App() {
           <Drawer.Screen name="DDD" component={TelaDDD} />
           <Drawer.Screen name="CEP" component={TelaCEP} />
           <Drawer.Screen name="CNPJ" component={TelaCNPJ} />
-          <Drawer.Screen name="IBGE" component={TelaIBGE} />
+          <Drawer.Screen name="BANKS" component={TelaBANKS} />
         </Drawer.Navigator>
         <StatusBar style="auto" />
       </NavigationContainer>
