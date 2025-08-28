@@ -1,7 +1,7 @@
 import * as config from './config.js';
 
-export const getDDD = async (ddd) => {
-    const url = `${config.url_api()}/ddd/v1/${ddd}`;
+export const getIBGE = async (ibge) => {
+    const url = `${config.url_api()}/ddd/v1/${ibge}`;
     const options = {
         method: 'GET',
         headers: {
