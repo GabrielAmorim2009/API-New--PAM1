@@ -13,7 +13,7 @@ export default CardCidade;
 
 const styles = StyleSheet.create({
   card: {
-    width: '100%',
+    width: '95%',
     backgroundColor: '#f8f8f8',
     padding: 10,
     margin: 10,

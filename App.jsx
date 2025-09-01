@@ -23,6 +23,7 @@ export default function App() {
               backgroundColor: '#000',     // fundo do header
               borderBottomWidth: 2,        // borda inferior do header
               borderBottomColor: '#000',   // cor da borda preta
+              boxShadow: '0 0 15px black',
             },
             headerTintColor: '#fff',        // cor do texto do header
             drawerActiveTintColor: '#fff',  // item ativo no drawer
