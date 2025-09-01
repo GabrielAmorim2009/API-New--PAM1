@@ -1,11 +1,13 @@
 import { StyleSheet, View, Text } from 'react-native';
 
-const CardCNPJ = ({ cnpj, uf, municipio }) => {
+const CardCNPJ = ({ cnpj, uf, municipio, razao_social, nome_fantasia }) => {
   return (
     <View style={styles.card}>
       <Text style={styles.texto}>CNPJ: {cnpj}</Text>
       <Text style={styles.texto}>UF: {uf}</Text>
       <Text style={styles.texto}>Munícipio: {municipio}</Text>
+      <Text style={styles.texto}>Razão Social: {razao_social}</Text>
+      <Text style={styles.texto}>Nome Fantasia: {nome_fantasia}</Text>
     </View>
   );
 }
@@ -20,8 +22,8 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 5,
     shadowColor: '#000',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: 'center',
+    align: 'center',
     shadowOffset: {
       width: 0,
       height: 2,
@@ -31,7 +33,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   texto: {
-    fontSize: 16,
     color: '#333',
+    marginTop: 5,
+    fontSize: 16,
   },
 });

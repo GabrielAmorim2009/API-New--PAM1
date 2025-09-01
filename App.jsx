@@ -6,6 +6,8 @@ import TelaDDD from './screens/TelaDDD';
 import TelaCEP from './screens/TelaCEP';
 import TelaCNPJ from './screens/TelaCNPJ';
 import TelaBANKS from './screens/TelaBANKS';
+import TelaHOME from './screens/TelaHOME';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -30,10 +32,36 @@ export default function App() {
             drawerInactiveTintColor: '#ccc',// item inativo
           }}
         >
-          <Drawer.Screen name="DDD" component={TelaDDD} />
-          <Drawer.Screen name="CEP" component={TelaCEP} />
-          <Drawer.Screen name="CNPJ" component={TelaCNPJ} />
-          <Drawer.Screen name="BANKS" component={TelaBANKS} />
+          <Drawer.Screen name="HOME" component={TelaHOME} options={{
+            drawerIcon:({color, size}) => (
+              <Ionicons size={size} color={color} name='home'/>
+            ),
+            drawerActiveTintColor: "#00c3ffff",
+          }}/>
+          <Drawer.Screen name="DDD" component={TelaDDD} options={{
+            drawerIcon:({color, size}) => (
+              <Ionicons size={size} color={color} name="map"/>
+            ),
+            drawerActiveTintColor: "#00c3ffff",
+          }}/>
+          <Drawer.Screen name="CEP" component={TelaCEP} options={{
+            drawerIcon:({color, size}) => (
+              <Ionicons size={size} color={color} name="location-sharp"/>
+            ),
+            drawerActiveTintColor: "#00c3ffff",
+          }}/>
+          <Drawer.Screen name="CNPJ" component={TelaCNPJ} options={{
+            drawerIcon:({color, size}) => (
+              <Ionicons size={size} color={color} name="business"/>
+            ),
+            drawerActiveTintColor: "#00c3ffff",
+          }}/>
+          <Drawer.Screen name="BANKS" component={TelaBANKS} options={{
+            drawerIcon:({color, size}) => (
+              <Ionicons size={size} color={color} name="bag-sharp"/>
+            ),
+            drawerActiveTintColor: "#00c3ffff",
+          }}/>
         </Drawer.Navigator>
         <StatusBar style="auto" />
       </NavigationContainer>

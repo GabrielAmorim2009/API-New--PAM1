@@ -16,14 +16,14 @@ export default CardCEP;
 
 const styles = StyleSheet.create({
   card: {
-    width: '100vw',
+    width: '50vw',
     backgroundColor: '#f8f8f8',
     padding: 10,
     margin: 10,
     borderRadius: 5,
     shadowColor: '#000',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: 'collumn',
+    alignItems: 'center',
     shadowOffset: {
       width: 0,
       height: 2,

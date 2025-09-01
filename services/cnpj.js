@@ -1,6 +1,6 @@
 import * as config from './config.js';
 
-export const getBANKS = async (cnpj) => {
+export const getCNPJ = async (cnpj) => {
     const url = `${config.url_api()}/cnpj/v1/${cnpj}`;
     const options = {
         method: 'GET',

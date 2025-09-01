@@ -42,6 +42,8 @@ export default function Tela_CNPJ() {
       cnpj={listaCNPJ.cnpj}
       uf={listaCNPJ.uf}
       municipio={listaCNPJ.municipio}
+      razao_social={listaCNPJ.razao_social}
+      nome_fantasia={listaCNPJ.nome_fantasia}
     />
   } 
 </ScrollView>

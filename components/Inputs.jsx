@@ -1,18 +1,27 @@
+import React, { useState } from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
 
-export const  InputDDD = ({ onChangeText }) => {
+export const InputDDD = ({ onChangeText }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
   return (
     <View style={styles.container}>
       <TextInput
-        style={styles.input}
+        style={[
+          styles.input,
+          { borderBottomColor: isFocused ? 'white' : 'gray' }
+        ]}
         maxLength={2}
         placeholder="Digite o DDD"
+        placeholderTextColor="white"
         keyboardType="numeric"
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
         onChangeText={onChangeText}
       />
     </View>
   );
-}
+};
 
 export const  InputCNPJ = ({ onChangeText }) => {
   return (
@@ -57,14 +66,18 @@ export const  InputBANKS = ({ onChangeText }) => {
 }
 
 const styles = StyleSheet.create({
-  input:{ 
+  input:{
     width: '100%',
-    backgroundColor: 'white',
-    borderColor: 'gray', 
-    height: 40, 
-    borderWidth: 1, 
-    borderRadius: 5,
+    backgroundColor: 'transparent',
+    borderColor: 'gray',
+    color: 'white',
+    textAlign: 'center',
+    height: 40,
+    outlineWidth: 0,
+    borderBottomWidth: 2,
     marginTop: 10,
     marginBottom: 10,
-  }
+    padding: 10,
+    fontSize: 26,
+  },
 });
