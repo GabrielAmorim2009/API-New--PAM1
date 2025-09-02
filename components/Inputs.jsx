@@ -56,8 +56,8 @@ export const  InputBANKS = ({ onChangeText }) => {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        maxLength={8}
-        placeholder="Digite o BANKS"
+        maxLength={1}
+        placeholder="Digite o código do banco"
         keyboardType='numeric'
         onChangeText={onChangeText}
       />

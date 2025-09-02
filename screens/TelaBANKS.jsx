@@ -14,7 +14,7 @@ export default function Tela_BANKS() {
       return typeof valor === 'string' && valor.trim() !== '' && !isNaN(Number(valor));
     }
     
-    if (!digito || digito.length !== 8 || !isNumero(digito)) {
+    if (!digito || digito.length !== 1 || !isNumero(digito)) {
       return;
     }
 
@@ -38,9 +38,11 @@ export default function Tela_BANKS() {
 <ScrollView>
   {Object.keys(listaBANKS).length > 0 && 
     <CardBANKS
-      key={listaBANKS.ispb}
-      banks={listaBANKS.ispb}
-      nome={listaBANKS.nome}
+      key={listaBANKS.code}
+      ispb={listaBANKS.ispb}
+      nome={listaBANKS.name}
+      codigo={listaBANKS.code}
+      nome_comp={listaBANKS.fullName}
     />
   } 
 </ScrollView>

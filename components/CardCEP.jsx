@@ -3,11 +3,26 @@ import { StyleSheet, View, Text } from 'react-native';
 const CardCEP = ({ cep, uf, cidade, bairro, rua }) => {
   return (
     <View style={styles.card}>
-      <Text style={styles.texto}>CEP: {cep}</Text>
-      <Text style={styles.texto}>UF: {uf}</Text>
-      <Text style={styles.texto}>Cidade: {cidade}</Text>
-      <Text style={styles.texto}>Bairro: {bairro}</Text>
-      <Text style={styles.texto}>Rua: {rua}</Text>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>CEP:</Text>
+        <Text style={styles.resposta}>{cep}</Text>
+      </View>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>UF:</Text>
+        <Text style={styles.resposta}>{uf}</Text>
+      </View>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>Cidade:</Text>
+        <Text style={styles.resposta}>{cidade}</Text>
+      </View>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>Bairro:</Text>
+        <Text style={styles.resposta}>{bairro}</Text>
+      </View>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>Rua:</Text>
+        <Text style={styles.resposta}>{rua}</Text>
+      </View>
     </View>
   );
 }
@@ -16,14 +31,13 @@ export default CardCEP;
 
 const styles = StyleSheet.create({
   card: {
-    width: '50vw',
+    width: 'auto',
     backgroundColor: '#f8f8f8',
     padding: 10,
     margin: 10,
     borderRadius: 5,
     shadowColor: '#000',
     flexDirection: 'collumn',
-    alignItems: 'center',
     shadowOffset: {
       width: 0,
       height: 2,
@@ -32,8 +46,17 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-    texto: {
-    fontSize: 16,
+  viewTextos: {
+    flexDirection: 'row',
+  },
+  texto: {
+    marginRight: 5,
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+  resposta: {
+    fontSize: 26,
     color: '#333',
   },
 });

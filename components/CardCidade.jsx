@@ -3,8 +3,14 @@ import { StyleSheet, View, Text } from 'react-native';
 const CardCidade = ({ nome, uf }) => {
   return (
     <View style={styles.card}>
-      <Text style={styles.texto}>Cidade: {nome}</Text>
-      <Text style={styles.texto}>UF: {uf}</Text>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>Cidade:</Text>
+        <Text style={styles.resposta}>{nome}</Text>
+      </View>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>UF:</Text>
+        <Text style={styles.resposta}>{uf}</Text>
+      </View>
     </View>
   );
 }
@@ -29,8 +35,17 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
+  viewTextos: {
+    flexDirection: 'row',
+  },
   texto: {
-    fontSize: 16,
+    marginRight: 5,
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+  resposta: {
+    fontSize: 26,
     color: '#333',
   },
 });

@@ -1,7 +1,7 @@
 import * as config from './config.js';
 
-export const getIBGE = async (bank) => {
-    const url = `${config.url_api()}/bank/v1/${bank}?providers=dados-abertos-br,gov,wikipedia`;
+export const getBANKS = async (banks) => {
+    const url = `${config.url_api()}/banks/v1/${banks}`;
     const options = {
         method: 'GET',
         headers: {
@@ -17,7 +17,7 @@ export const getIBGE = async (bank) => {
         
         return await response.json();
     } catch (error) {
-        console.error('Error fetching DDD data:', error);
+        console.error('Error fetching BANKS data:', error);
         throw error;
     }
 }

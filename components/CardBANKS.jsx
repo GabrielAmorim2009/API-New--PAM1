@@ -1,10 +1,24 @@
 import { StyleSheet, View, Text } from 'react-native';
 
-const CardBANKS = ({ ispb, nome }) => {
+const CardBANKS = ({ ispb, nome, codigo, nome_comp }) => {
   return (
     <View style={styles.card}>
-      <Text style={styles.texto}>Código: {ispb}</Text>
-      <Text style={styles.texto}>Nome: {nome}</Text>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>ISPB:</Text>
+        <Text style={styles.resposta}>{ispb}</Text>
+      </View>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>Nome:</Text>
+        <Text style={styles.resposta}>{nome}</Text>
+      </View>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>Código:</Text>
+        <Text style={styles.resposta}>{codigo}</Text>
+      </View>
+      <View style={styles.viewTextos}>
+        <Text style={styles.texto}>Nome Completo:</Text>
+        <Text style={styles.resposta}>{nome_comp}</Text>
+      </View>
     </View>
   );
 }
@@ -13,14 +27,13 @@ export default CardBANKS;
 
 const styles = StyleSheet.create({
   card: {
-    width: '100%',
+    width: 'auto',
     backgroundColor: '#f8f8f8',
     padding: 10,
     margin: 10,
     borderRadius: 5,
     shadowColor: '#000',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: 'collumn',
     shadowOffset: {
       width: 0,
       height: 2,
@@ -29,8 +42,17 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
+  viewTextos: {
+    flexDirection: 'row',
+  },
   texto: {
-    fontSize: 16,
+    marginRight: 5,
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+  resposta: {
+    fontSize: 18,
     color: '#333',
   },
 });
