@@ -16,7 +16,7 @@ export default function App() {
     <View style={styles.container}> {/* fundo cinza */}
       <NavigationContainer>
         <Drawer.Navigator
-          initialRouteName="DDD"
+          initialRouteName="HOME"
           screenOptions={{
             drawerStyle: {
               backgroundColor: '#000', // fundo do drawer

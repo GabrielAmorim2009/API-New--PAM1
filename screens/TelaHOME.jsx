@@ -1,8 +1,10 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 export default function Tela_HOME() {
     return <View style={styles.container}>
-        <Text style={styles.texto}>134</Text>
+        <ImageBrackground
+          
+        ></ImageBrackground>
     </View>
 }
 
