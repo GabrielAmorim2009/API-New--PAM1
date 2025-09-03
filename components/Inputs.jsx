@@ -56,9 +56,22 @@ export const  InputBANKS = ({ onChangeText }) => {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        maxLength={1}
+        maxLength={2}
         placeholder="Digite o código do banco"
         keyboardType='numeric'
+        onChangeText={onChangeText}
+      />
+    </View>
+  );
+}
+
+export const  InputTAXAS = ({ onChangeText }) => {
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.input}
+        maxLength={5}
+        placeholder="Digite o nome da taxa"
         onChangeText={onChangeText}
       />
     </View>

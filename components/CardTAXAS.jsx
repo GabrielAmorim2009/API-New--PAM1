@@ -1,21 +1,21 @@
 import { StyleSheet, View, Text } from 'react-native';
 
-const CardCidade = ({ nome, uf }) => {
+const CardTAXAS = ({ nome, valor }) => {
   return (
     <View style={styles.card}>
       <View style={styles.viewTextos}>
-        <Text style={styles.texto}>Cidade:</Text>
+        <Text style={styles.texto}>Nome:</Text>
         <Text style={styles.resposta}>{nome}</Text>
       </View>
       <View style={styles.viewTextos}>
-        <Text style={styles.texto}>UF:</Text>
-        <Text style={styles.resposta}>{uf}</Text>
+        <Text style={styles.texto}>Valor:</Text>
+        <Text style={styles.resposta}>{valor}</Text>
       </View>
     </View>
   );
 }
 
-export default CardCidade;
+export default CardTAXAS;
 
 const styles = StyleSheet.create({
   card: {
@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
   },
   texto: {
     marginRight: 5,
-    fontSize: 17,
+    fontSize: 20,
     fontWeight: 'bold',
     color: 'black',
   },
   resposta: {
-    fontSize: 15,
+    fontSize: 20,
     color: '#333',
   },
 });

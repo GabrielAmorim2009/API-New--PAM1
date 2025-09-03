@@ -6,6 +6,7 @@ import TelaDDD from './screens/TelaDDD';
 import TelaCEP from './screens/TelaCEP';
 import TelaCNPJ from './screens/TelaCNPJ';
 import TelaBANKS from './screens/TelaBANKS';
+import TelaTAXAS from './screens/TelaTAXAS';
 import TelaHOME from './screens/TelaHOME';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -59,6 +60,12 @@ export default function App() {
           <Drawer.Screen name="BANKS" component={TelaBANKS} options={{
             drawerIcon:({color, size}) => (
               <Ionicons size={size} color={color} name="bag-sharp"/>
+            ),
+            drawerActiveTintColor: "#00c3ffff",
+          }}/>
+          <Drawer.Screen name="TAXAS" component={TelaTAXAS} options={{
+            drawerIcon:({color, size}) => (
+              <Ionicons size={size} color={color} name="cash"/>
             ),
             drawerActiveTintColor: "#00c3ffff",
           }}/>
